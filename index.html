@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        
+    .swiper{
+        width: 100%;
+        height: 900px;
+        padding-top: 300px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide{
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 380px;
+        background-color: #ff98a9;
+        border-radius: 10px;
+        overflow: hidden;
+        bottom: 110px;
+    }
+    .swiper-slide .imgBox{
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+    .swiper-slide .imgBox img{
+        width: 100%;
+    }
+    .swiper-slide .detail{
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 20px;
+    }
+    .swiper-slide .detail h3{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #ffffff;
+    }
+    .swiper-slide .detail h3 span{
+        font-size: 16px;
+        color: #ffffff;
+    }
+    
+    
+    .slideitem:hover img {
+    filter: brightness(50%);
+}
+
+    .slideitem:hover p {
+        opacity: 1;
+    }
+
+    .slideitem p {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slideitem img{
+    object-fit: cover;
+    transition: filter 0.5s ease-in-out;
+}
+
+        
+button{
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #ffffff;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+
+    .header {
+    position: relative;
+    max-width: 100%;
+    max-height: 80px;
+    margin: auto;
+    padding: 20px;
+    background-color: #774d5b;
+    }
+    .btns {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    }  
+    .btns_menu {
+    display: flex;
+    justify-content: center;
+    }
+
+.btns_menu .btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    margin: 4px;
+    cursor: pointer;
+    background-color: #ff98a9;
+    font-family: 'neon1';
+}
+        body {
+            margin: 0;
+        }
+        .visual {
+            width: 1920px;
+            height: 850px;
+            margin: auto;
+            display: flex;
+            background-image: url(./img/메인2.png);
+        }
+        .visual .inner {
+            width: 1100px;
+            margin: 0 auto;
+            height: 646px;
+            position: relative;
+        }
+        .visual .pcup1 {
+            position: absolute;
+            bottom: 0;
+            left: 400px;
+            top: 180px;
+        }
+        .visual .pcup2 {
+            position: absolute;
+            bottom: 0;
+            right: 100px;
+            top: 180px;
+        }
+        .visual .pcup3 img{
+            width: 750px;
+            height: 330px;
+            position: relative;
+            bottom: 0;
+            top: 150px;
+            right: 300px;
+            animation:ani 1s infinite alternate;
+        }
+@keyframes ani{
+0%{transform:translate(0,0);}
+100%{transform:translate(0,20px);}
+}  
+
+
+        .visual img{
+            width: 670px;
+            height: 670px;
+            margin-left: 150px;
+        }
+
+
+        .main{
+            width: 1400px;
+            height: 700px;
+            background-color: rgb(248, 198, 207);
+            margin: auto;
+            display: flex;
+            padding: 20px;
+            }
+            
+            .main img{
+                width: 10px;
+                height: 10px;
+            }
+            
+        .container {
+            position: relative;
+            width: 1920px;
+            height: 900px;
+            padding: 20px;
+            margin: auto;
+            top: 80px;
+            background-color: #fdcfd6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container1 {
+            position: relative;
+            width: 1920px;
+            height: 900px;
+            padding: 20px;
+            margin: auto;
+            top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./img/집배경.png);
+        }
+        .container2 {
+            position: relative;
+            width: 1920px;
+            height: 900px;
+            padding: 20px;
+            margin: auto;
+            top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./img/방배경.png);
+        }
+        .container3 {
+            position: relative;
+            width: 1920px;
+            height: 900px;
+            padding: 20px;
+            margin: auto;
+            top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./img/합주실배경.png);
+        }
+        .container5 {
+            position: relative;
+            width: 1920px;
+            height: 900px;
+            padding: 20px;
+            margin: auto;
+            top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fdcfd6;
+        }
+
+        .container7 {
+            position: relative;
+            width: 1920px;
+            height: 1000px;
+            padding: 20px;
+            bottom: 250px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fdcfd6;
+        }
+        .um img{
+            width: 1920px;
+            height: 250px;
+            position: relative;
+            bottom: 250px;
+            left: 400px;
+        }
+        
+
+
+        .back-to-position {
+            opacity: 0;
+            transition: 1s;
+        }
+        .back-to-position.to-right {
+            transform: translateX(-120px);
+        }
+        .back-to-position.to-left {
+            transform: translateX(150px);
+        }
+        .show .back-to-position {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .show .back-to-position.delay-0 {
+            transition-delay: 0s;
+        }
+        .show .back-to-position.delay-1 {
+            transition-delay: .3s;
+        }
+
+        .work{
+            width: 960px;
+            height: 300px;
+            outline: solid 5px #ff98a9;
+            background-color: #fff;
+            margin-bottom: 350px;
+        }
+        .work img{
+            width: 920px;
+            height: 300px;
+        }
+
+        * {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+
+.slidebox {max-width:500px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom: 50px;
+    margin-right: 700px;
+    }
+
+    .slidebox .slidelist {position:relative;
+    white-space:nowrap;
+    font-size:0;
+    overflow:hidden;
+    margin-top: 40px;}
+
+    .slidebox .slidelist .slideitem {position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    background-color:#fff;
+    width:100%;
+    transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+.slidebox .slidelist .slideitem > a img {max-width:100%;}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:-50px;background:rgb(253, 181, 194) url('./img/왼쪽.png') center center / 50% no-repeat;}
+.slidebox .slide-control [class*="control"] label.next {right:-50px;background: rgb(253, 181, 194) url('./img/오른쪽.png') center center / 50% no-repeat;}
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
+#slide04:checked ~ .slide-control .control04 {display:block;}
+
+
+.mosion{
+    position: relative;
+    right: 200px;
+}
+.mosion video{
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pro{
+    position: relative;
+    right: 150px;
+}
+
+.pro video{
+    width: 500px;
+    height: 400px;
+    display: inline;
+}
+
+h3 {margin-top: 50px;
+    font-size: 40px;color: #ffffff;
+    text-align: center;
+    2px 2px 5px rgba(0,0,0,0.5); /* 입체감 주는 그림자 */
+    background: linear-gradient(to right top, #ff82af, #ff82af);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.highlighter {background: linear-gradient(#f8abb8 0 100%); background-position: 0 calc(100% - 2px); background-size: 0 14px; background-repeat: no-repeat; transition: background-size 0.3s;}
+.highlighter.center {background-position: center calc(100% - 2px);} 
+.highlighter.right {background-position: right calc(100% - 2px);} 
+.highlighter:hover {background-size:100% 14px;}
+
+@font-face {
+    font-family: 'neon';
+    src: url('/PyeongChangPeace-Bold.ttf') format('truetype');
+}
+
+body {
+	font-family: 'neon';
+}
+
+
+.wrap { transform: scale(1.2);}
+.temp-bg-back { transition: .1s ease-out; }
+
+header {
+    margin: auto;
+    display: flex;
+    bottom: 600px;
+}
+
+.my {
+            width: 1440px;
+            height: 650px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 80px;
+            background-color: #ff98a9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+}
+
+
+.my_box h3{
+    color: #fff;
+}
+
+.my_left{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background-image: url(./img/사진.png);
+    border-radius: 15px;
+    top: 120px;
+    right: 120px;
+} 
+
+.my_right{
+    margin-left: 450px;
+}
+.my_right h1{
+    position: relative;
+    text-align: left; 
+    font-size: 35px;
+    bottom: 230px;
+}
+
+.back-to-position {
+            opacity: 0;
+            transition: 1s;
+        }
+        .back-to-position.to-right {
+            transform: translateX(-150px);
+        }
+        .back-to-position.to-left {
+            transform: translateX(150px);
+        }
+        .show .back-to-position {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .show .back-to-position.delay-0 {
+            transition-delay: 0s;
+        }
+        .show .back-to-position.delay-1 {
+            transition-delay: .3s;
+        }
+
+
+.my_right h2{
+    position: relative;
+    text-align: left; 
+    font-size: 25px;
+    bottom: 190px;
+}
+@font-face {
+    font-family: 'neon1';
+    src: url('/GmarketSansLight.otf') format('truetype');
+}
+
+
+.my_down img{
+    position: relative;
+    width: 1200px;
+    height: 150px;
+    bottom: 80px;
+    right: 160px;
+}
+.custom-font {
+            font-family: 'neon1', 'truetype'; /* 정의한 폰트 사용 */
+            color: #ffffff; /* 폰트 색상 설정 */
+            font-weight: lighter; /* 필요에 따라 두께 조정 */
+        }
+
+.default-font {
+            font-family: 'neon', sans-serif; /* 기본 고딕체로 설정 (예: Arial) */
+        }
+
+        .mise{
+            position: relative;
+            width: 1920px;
+            height: 700px;
+            background-color: #ff98a9;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .mise h3{
+            position: relative;
+            font-family: 'neon1';
+            font-size: 30px;
+            color: #ffffff;
+            bottom: 700px;
+            line-height: 60px;
+        }
+
+
+
+        .photo1{
+            width: 300px;
+            height: 700px;
+        }
+        .photo1 img{
+            width: 300px;
+            height: 700px;
+            position: relative;
+            left: 1300px;
+            animation:ani 1s infinite alternate;
+        }
+        .photo2 img{
+            width: 400px;
+            height: 700px;
+            position: relative;
+            right: 170px;
+            bottom: 60px;
+            animation:ani 1s infinite alternate;
+        }
+        .photo3 img{
+            width: 300px;
+            height: 750px;
+            position: relative;
+            left: 1200px;
+            bottom: 10px;
+            animation:ani 1s infinite alternate;
+        }
+        .photo4 img{
+            width: 300px;
+            height: 750px;
+            position: relative;
+            left: 40px;
+            bottom: 10px;
+            animation:ani 1s infinite alternate;
+        }
+        .um_left img{
+            width: 250px;
+            height: 350px;
+            position: relative;
+            left: 1px;
+            right: 20px;
+            animation:ani 1s infinite alternate;
+            top: 300px;
+        }
+        .um_right img{
+            width: 200px;
+            height: 350px;
+            position: relative;
+            left: 1200px;
+            right: 40px;
+            bottom: 200px;
+            animation:ani 1s infinite alternate;
+        }
+        .text1 img{
+            width: 230px;
+            height: 120px;
+            position: relative;
+            top: 30px;
+            left: 130px;
+        }
+        .text2 img{
+            width: 370px;
+            height: 120px;
+            position: relative;
+            top: 0px;
+            left: 400px;
+        }
+        .text3 img{
+            width: 440px;
+            height: 120px;
+            position: relative;
+            left: 280px;
+            bottom: 100px;
+        }
+        .text4 img{
+            width: 220px;
+            height: 140px;
+            position: relative;
+            left: 800px;
+            top: 50px;
+        }
+        .text5 img{
+            width: 220px;
+            height: 140px;
+            position: relative;
+            bottom: 400px;
+            left: 850px;
+        }
+        footer{
+            width: 100%;
+            height: 150px;
+            background-color: #774d5b;
+        }
+        footer h3{
+            position: relative;
+            font-size: 15px;
+            color: #ffffff;
+            font-family: neon1;
+            top: 70px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="btns">
+            <div class="header">
+            <div class="btns_menu">
+                <button class="btn home">홈</button>
+                <button class="btn about">작업물</button>
+                <button class="btn skills">소개</button>
+                <button class="btn works">연혁</button>
+                <button class="btn contact">다짐</button>
+            </div>
+        </div>
+    </div>
+    <section id="home">
+    <div class="bg-inner">
+        <div class="wrap">
+        <div class="temp-bg-back">
+            <section class="visual">
+                <div class="inner">
+                    <div class="pcup3 fade-in">
+                        <img src="./img/메인로고.png" alt="" class="cup3 image">
+                    </div>
+                    <div class="pcup2 fade-in">
+                        <img src="./img/기타.png" alt="">
+                    </div>
+                    <div class="pcup1 fade-in">
+                        <img src="./img/러프수정.png" alt="" class="cup1 image">
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+    </div>
+    </section>
+    
+
+
+    <section id="about">
+<div class="container1">
+    <div class="photo1">
+        <img src="./img/포토샵그림.png" alt="">
+    </div>
+    <div class="slidebox">
+        <div class="text1">
+            <img src="./img/포토샵글자.png" alt="">
+        </div>
+        <div class="gradcircle"></div>
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <a><img src="./img/상세페이지.png"></a>
+                <p>메리몽드 상세페이지 리디자인, 2024.06.17</p>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/동아리2.jpg"></a>
+                <p>밴드부 홍보 포스터, 2023.03.30</p>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/동아리.png"></a>
+                <p>밴드부 홍보 포스터, 2024.03.20</p>
+            </li>
+            <li class="slideitem">
+                <a><img src="./img/일러스트.png"></a>
+                <p>리그오브레전드 팬아트, 2022.04.16</p>
+            </li>
+            
+        </ul>
+        <div class="slide-control">
+            <div class="control01">
+                <label for="slide04" class="prev"></label>
+                <label for="slide02" class="next"></label>
+            </div>
+            <div class="control02">
+                <label for="slide01" class="prev"></label>
+                <label for="slide03" class="next"></label>
+            </div>
+            <div class="control03">
+                <label for="slide02" class="prev"></label>
+                <label for="slide04" class="next"></label>
+            </div>
+            <div class="control04">
+                <label for="slide03" class="prev"></label>
+                <label for="slide01" class="next"></label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="photo2">
+        <img src="./img/에펙편집.png" alt="">
+    </div>
+    <div class="mosion">
+        <div class="text2">
+            <img src="./img/애프터이펙트글자.png" alt="">
+        </div>
+            <video src="에펙 기말 과제 v1.mp4" controls>
+        </video>
+    </div>
+</div>
+
+<div class="container3">
+    <div class="photo3">
+        <img src="./img/프리미어 그림.png" alt="">
+    </div>
+    <div class="pro">
+        <div class="text3">
+            <img src="./img/프리미어프로글자.png" alt="">
+        </div>
+            <video src="프리미어1.mp4" controls></video>
+            <video src="프리미어2.mp4" controls></video>
+    </div>
+</div>
+</section>
+
+<section id="skills">
+<section class="section scroll-spy">
+<div class="container">
+    <div class="my">
+        <div class="um_left">
+            <img src="./img/음표1.png" alt="">
+        </div>
+        <div class="um_right">
+            <img src="./img/음표2.png" alt="">
+        </div>
+        <div class="my_box">
+            <div class="my_left">
+            </div>
+            <div class="my_right">
+                <div class="box2 back-to-position to-left delay-1">
+                    <h1 class="custom-font">디자인에 <span class="default-font">무게</span>를 더하다,<br>진중한 디자이너 <span class="default-font">김수빈</span>입니다.</h1>
+                    <h2 class="custom-font">♪ 덕성여자고등학교 졸업 [2020~2022]</h2><br>
+                    <h2 class="custom-font">♪ 한국폴리텍대학교 정수캠퍼스<br>시각디자인과 학부생 [2023~현재]</h2>
+                </div>
+            </div>
+            <div class="my_down">
+                <img src="./img/바.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</section>
+
+<section id="works">
+<section class="section scroll-spy">
+    <div class="container5">
+        <div class="text5">
+            <img src="./img/연혁글자.png" alt="">
+        </div>
+    <div class="swiper">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 1.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.04.12<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 2.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.05.03<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 3.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.06.21<br><span>상세페이지</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 4.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.08.30<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 5.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.10.23<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 6.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2024.11.17<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 7.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2023.12.14<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBox">
+            <img src="./img/이미지그래픽 8.png" alt="">
+        </div>
+        <div class="detail">
+            <h3>2024.04.25<br><span>이미지그래픽</span></h3>
+        </div>
+    </div>
+    </div>
+</div>
+    </div>
+</section>
+</section>
+
+<div class="container6">
+    <div class="um">
+        <img src="./img/제목 없음-6.png" alt="">
+    </div>
+
+
+<section id="contact">
+<div class="container7">
+    <div class="mise">
+        <div class="text4">
+            <img src="./img/다짐글자.png" alt="">
+        </div>
+        <div class="photo4">
+            <img src="./img/회사사진.png" alt="">
+        </div>
+        <h3>"저는 처음부터 잘해나가는 사람이 아닌,
+            <br>하루하루 노력하며 점차 성장을 이루어가는 사람입니다.
+            <br>저의 디자인 신념처럼 디자인에 무게를 더해가며
+            <br>앞으로 더욱 뜻깊은 결과를 만들어내겠습니다."</h3>
+    </div>
+</div>
+<footer>
+    <h3>ⓒ 2024 김수빈 포트폴리오</h3>
+</footer>
+</section>
+
+
+    <script>
+        const spyEls = document.querySelectorAll('section.scroll-spy');
+        const controller = new ScrollMagic.Controller();
+
+        spyEls.forEach(function (spyEL) {
+            new ScrollMagic
+            .Scene({triggerElement: spyEL})
+            .setClassToggle(spyEL, 'show')
+            .addTo(controller)
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll(' .fade-in');
+        gsap.from(fadeEls, {
+            duration: 2,
+            opacity: 0,
+            stagger: 0.7
+        })
+    </script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+        // Optional parameters
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+    
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        </script>
+            <script>
+                const btnHome = document.querySelector('.home');
+                const sectionHome = document.querySelector('#home')
+                btnHome.addEventListener('click', function() {
+                    sectionHome.scrollIntoView({behavior:"smooth", block:"center"});
+                })
+                const btnAbout = document.querySelector('.about');
+                const sectionAbout = document.querySelector('#about')
+                btnAbout.addEventListener('click', function() {
+                    sectionAbout.scrollIntoView({behavior:"smooth", block:"center"});
+                })
+                const btnSkills = document.querySelector('.skills');
+                const sectionSkills = document.querySelector('#skills')
+                btnSkills.addEventListener('click', function() {
+                    sectionSkills.scrollIntoView({behavior:"smooth", block:"center"});
+                })
+                const btnWorks = document.querySelector('.works');
+                const sectionWorks = document.querySelector('#works')
+                btnWorks.addEventListener('click', function() {
+                    sectionWorks.scrollIntoView({behavior:"smooth", block:"center"});
+                })
+                        const btnContact = document.querySelector('.contact');
+                const sectionContact = document.querySelector('#contact')
+                btnContact.addEventListener('click', function() {
+                    sectionContact.scrollIntoView({behavior:"smooth", block:"center"});
+                })
+        
+                const arrowUp = document.querySelector('.arrow-up');
+            document.addEventListener('scroll', function() {
+              // console.log(window.scrollY);
+            if (window.scrollY > 300) {
+                arrowUp.classList.add('show');
+            } else {
+                arrowUp.classList.remove('show');
+            }
+            })
+        
+            // const btnHome = document.querySelector('.home');
+            // const sectionHome = document.querySelector('#home');
+            arrowUp.addEventListener('click', function() {
+            sectionHome.scrollIntoView({behavior:"smooth", block:"center"});
+        
+            })
+            </script>
+
+            <script>
+                $('.bg-inner').on("mousemove", function(e) {
+  const width = $(window).width();
+  const height = $(window).height();
+
+  const moveX = (e.pageX - width / 2) / width;
+  const moveY = (e.pageY - height / 2) / height;
+
+  const backMoveX = -moveX * 30;
+  const backMoveY = -moveY * 10;
+
+  $('.pcup1').css({
+    transform: `translate(${backMoveX}px, ${backMoveY}px)`
+  });
+});
+</script>
+
+<script>
+                $('.bg-inner').on("mousemove", function(e) {
+            const width = $(window).width();
+            const height = $(window).height();
+            
+            const moveX = (e.pageX - width / 2) / width;
+            const moveY = (e.pageY - height / 2) / height;
+            
+              const backMoveX = -moveX * 10;
+              const backMoveY = -moveY * 30;
+            
+            $('.pcup2').css({
+                transform: `translate(${backMoveX}px, ${backMoveY}px)`
+            });
+            });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
